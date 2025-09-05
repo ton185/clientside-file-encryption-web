@@ -1522,7 +1522,6 @@ async function decryptDual(dataData, dataParams, paramsData, paramsParams, pass)
                 return arrays;
             }
 
-            // Your custom function - updated to accept encrypt parameter
             async function processFileData(fileData, password, shouldDerive, encrypt, encryptFilename, fileName) {
                 let enc;
                 resultInfo = {
@@ -1567,13 +1566,6 @@ async function decryptDual(dataData, dataParams, paramsData, paramsParams, pass)
                 } else {
                     resultFileBlob = new Blob([enc], { type: 'application/octet-stream' });
                 }
-
-                // Example of what your function might do:
-                // 1. Derive key from password if needed
-                // 2. Process the file data
-                // 3. Return or save results
-
-                // Simulate successful processing
                 const resultMessage = `
                     <p><strong>File processed successfully!</strong></p>
                     <p><strong>Original name:</strong> ${fileName}</p>
